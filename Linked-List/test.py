@@ -54,6 +54,16 @@ def delete_pos(head,pos):
         temp=temp.next
     temp.next=temp.next.next
     return head
+
+def removedup(head):
+    if head==None:
+        return
+    curr=head
+    while curr!= None and curr.next !=None:
+        if curr.key==curr.next.key:
+            curr.next=curr.next.next 
+        else:
+            curr=curr.next 
 def printhead(head):
     curr=head
     while curr!=None:
@@ -66,14 +76,17 @@ if __name__ == '__main__':
     head=None
     head=insert_beg(head,10)
     head=insert_end(head,100)
+    head=insert_end(head,99)
     head=insert_pos(head,20,2)
     head=insert_pos(head,90,3)
     head=insert_pos(head,9,1)
+    head=insert_pos(head,20,1)
+    head=insert_pos(head,9,1)
+    head=insert_pos(head,99,5)
     head=insert_pos(head,99,5)
 
     print("Printing List after insertion")
     printhead(head)
-
-    print("Deleting from list\n")
-    head=delete_pos(head,4)
+    removedup(head)
+    print("Duplicates removed  from list\n")
     printhead(head)
