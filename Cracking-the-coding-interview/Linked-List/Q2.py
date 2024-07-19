@@ -28,16 +28,20 @@ def delete_beg(head):
     head.next=None 
     return n
 
-def delete_pos(head,pos):
+def delete_pos(head):
     if head==None:
-        return 
-    if pos==1:
-        delete_beg(head)
-    temp=head 
-    for i in range(pos-2):
-        temp=temp.next 
-    temp.next=temp.next.next 
-    return head
+        return
+    prev=node(0)
+    prev.next=head 
+    slow=prev
+    fast=head 
+    while fast != None and fast.next != None:
+        fast=fast.next.next 
+        slow=slow.next
+    slow.next=slow.next.next 
+    return prev.next
+
+    
 
 def printhead(head):
     curr=head
@@ -54,9 +58,10 @@ if __name__== '__main__':
     head=insert_beg(head,70)
     head=insert_beg(head,60)
     head=insert_beg(head,50)
+    head=insert_beg(head,990)
     
 
     printhead(head)
     c=count_node(head)
-    head=delete_pos(head,c//2 +1)
+    head=delete_pos(head)
     printhead(head)
