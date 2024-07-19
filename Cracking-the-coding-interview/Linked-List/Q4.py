@@ -1,3 +1,6 @@
+'''2.4 Partition list 
+'''
+
 class Node:
     def __init__(self, key):
         self.key = key
@@ -7,6 +10,17 @@ def insert_beg(head, k):
     temp = Node(k)
     temp.next = head
     return temp
+
+def insert_last(head,k):
+    temp=Node(k)
+    if head==None:
+        return temp 
+    curr=head 
+    while curr.next != None:
+        curr=curr.next 
+    curr.next=temp 
+    return head 
+
 
 def print_list(head):
     curr = head
@@ -20,21 +34,23 @@ def partition_list(head, x):
     before_curr,after_curr=before,after 
 
     while head:
-        if head.key <x:
-            before_curr.next,before_curr=head,head
+        if head.key < x:
+            before_curr.next, before_curr = head, head
         else:
-            after_curr.next,after_curr=head,head
-        head=head.next
-    after_curr.next=None 
-    before_curr.next=after.next 
+            after_curr.next, after_curr = head, head
 
+        head = head.next
+        
+    after_curr.next = None
+    before_curr.next = after.next
+        
     return before.next
 
 # Example usage
 head = None
 keys = [3, 5, 8, 5, 10, 2, 1]
 for key in keys:
-    head = insert_beg(head, key)
+    head = insert_last(head, key)
 
 print("Original List:")
 print_list(head)
