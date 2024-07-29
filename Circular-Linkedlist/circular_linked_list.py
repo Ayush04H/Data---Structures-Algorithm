@@ -37,7 +37,7 @@ def insert_end_m2(head,k):
 
 def insert_pos(head, k, pos):
     temp = node(k)
-    if head is None and pos == 1:
+    if head is None or pos == 1:
         temp.next = temp
         return temp
     
