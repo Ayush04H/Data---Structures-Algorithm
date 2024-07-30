@@ -18,4 +18,4 @@ def sqrtfloor2(n):
             low=mid+1 
             ans=mid 
     return ans
-print(sqrtfloor2(14))
+print(sqrtfloor2(8))
