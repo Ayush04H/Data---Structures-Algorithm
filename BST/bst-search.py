@@ -71,31 +71,51 @@ def delete_node(root,k):
 
     return root
 
+
+def getFloor(root,x):
+    res = None
+
+    while root != None:
+        
+        if root.key == x:
+            return root.key
+        elif root.key>x:
+            root = root.left
+        else:
+            res = root.key
+            root = root.right
+    
+    return res
+
+
+def getCeil(root,x):
+    res = None
+
+    while root != None:
+        
+        if root.key == x:
+            return root.key
+        elif root.key>x:
+            res = root.key
+            root = root.left
+        else:
+            root = root.right
+    
+    return res
     
     
 
 
 if __name__ == '__main__':
-    root=Node(55)
-    root=insert_recc(root,50)
-    root=insert_recc(root,100)
-    root=insert_recc(root,150)
-    root=insert_recc(root,20)
-    root=insert_recc(root,10)
-    root=insert_recc(root,5)
-    root=insert_recc(root,17)
-    root=insert_recc(root,117)
-    root=insert_recc(root,60)
-    root=insert_recc(root,70)
-    root=insert_recc(root,80)
-    root=insert_itr(root,180)
-    root=insert_itr(root,11)
+    root=Node(10)
+    root=insert_itr(root,5)
+    root=insert_itr(root,15)
     root=insert_itr(root,12)
+    root=insert_itr(root,30)
     print("Before deleteion")
     inorder_traversal(root)
 
     print("\n")
 
-    root=delete_node(root,17)
-    print("After deleteion")
-    inorder_traversal(root) 
+    print(getFloor(root,100))
+    print(getCeil(root,13))
