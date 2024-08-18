@@ -32,5 +32,5 @@ def bsearchitr(arr,x):
 def countocc(l,x):
     return lastocc2(l,x)-bsearchitr(l,x)+1
 
-l=[10,10,20,20,20,20]
-print(countocc(l,20))
+l=[1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0]
+print(countocc(l,1))
