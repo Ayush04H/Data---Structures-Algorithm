@@ -24,7 +24,7 @@ def subset_sum(arr: list[int], sum_val: int) -> bool:
 def main():
     # Example values for the Subset Sum problem
     arr = [3, 34, 4, 12, 5, 2]  # Set of numbers
-    sum_val = 1  # Desired sum
+    sum_val = 37 # Desired sum
     
     # Call the subset_sum function
     result = subset_sum(arr, sum_val)
