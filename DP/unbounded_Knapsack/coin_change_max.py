@@ -11,19 +11,19 @@ def count_subset( arr:list[int] , Sum:int):
             else:
                 t[i][s] = t[i -1][s]
 
-    return t[n][s]
+    return t[n][Sum]
 
 
 def main():
     # Example values for the Subset Sum problem
-    arr = [2, 5, 3, 6]  # Set of numbers
-    sum_val = 10  # Desired sum
+    arr = [1 , 2 , 3]  # Set of numbers
+    sum_val = 5  # Desired sum
     
     # Call the subset_sum function
     result = count_subset(arr, sum_val)
     
     # Print the result
-    print("Is there a subset with the given sum?", result)
+    print("Maaximum number of Subset possible are ", result)
 
 if __name__ == "__main__":
     main()
