@@ -15,7 +15,7 @@ def lcs(x :str,y:str) ->int :
 
     return t[m][n]
 
-S1 = "AGGTABX"
-S2 = "GXTXAYB"
+S1 = "geek"
+S2 = "eke"
 
 print("Length of LCS is", lcs(S1, S2))
