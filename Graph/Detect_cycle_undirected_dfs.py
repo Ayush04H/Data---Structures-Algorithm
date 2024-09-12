@@ -42,6 +42,10 @@ else:
 
 
 ''' DRY RUN WITH EXAMPLE
+
+        V = 6
+        adj = [[1, 3], [0, 2], [1], [0, 4], [3, 5], [4]]
+
         Step-by-Step Dry Run:
         Initial Setup:
 
