@@ -1,6 +1,6 @@
 from collections import deque
 
-# Function to perform BFS and detect a cycle in an undirected graph
+# Function to perform BFS and detect a cycle in an undirected graph 
 def BFS_cycle_detection(adj, s, visited,parent):
     # Queue will store pairs (node, parent)
     q = deque()
@@ -9,7 +9,7 @@ def BFS_cycle_detection(adj, s, visited,parent):
     
     # BFS loop
     while q:
-        node = q.popleft()
+        node = q.popleft() # O(v+e) , O(v)
         
         # Visit all adjacent nodes
         for u in adj[node]:
@@ -26,7 +26,7 @@ def BFS_cycle_detection(adj, s, visited,parent):
 def BFS_undirected_cycle(adj, V):
     visited = [False] * V
     
-    # Loop through all vertices to ensure all components are checked
+    # Loop through all vertices to ensure all components are checked 
     for u in range(V):
         if not visited[u]:
             if BFS_cycle_detection(adj, u, visited,-1):
@@ -34,10 +34,10 @@ def BFS_undirected_cycle(adj, V):
             
     return False
 
-# Helper function to add edges to the adjacency list
+# Helper function to add edges to the adjacency list 
 def addEdge(adj, u, v):
     adj[u].append(v)
-    adj[v].append(u)
+    adj[v].append(u)    # O(v+e) , O(v)
 
 # Example usage
 v = 6
@@ -55,3 +55,7 @@ if BFS_undirected_cycle(adj, v):
     print("Cycle found")
 else:
     print("No cycle")
+
+
+
+# Dry Rnun For The above  is 
