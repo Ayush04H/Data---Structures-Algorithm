@@ -36,7 +36,7 @@ addEdge(adj,0,3)
 addEdge(adj,4,5)
 
 if(DFS_und(adj)):
-    print("Cycle found")
+    print("Cycle found")   # O(v+e) , O(v)
 else:
     print("No cycle")
 
