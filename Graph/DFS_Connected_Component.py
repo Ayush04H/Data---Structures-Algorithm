@@ -12,7 +12,7 @@ def DFS(adj,s,visited):
         if visited[u] == False:
             DFS(adj, u, visited)
 
-def DFS_rec(adj):
+def DFS_rec(adj):                   # O(v+e) , O(v)
     visited = [False] * len(adj)
     res=0
 
