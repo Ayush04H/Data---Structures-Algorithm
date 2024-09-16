@@ -23,15 +23,13 @@ def bfs(adj):
                 visited[u]=True
 
 
-v=6
+v=4
 adj=[[] for i in range(v)]
 add_adj(adj,0,1)
-add_adj(adj,0,2)
-add_adj(adj,0,5)
+add_adj(adj,0,3)
+add_adj(adj,1,2)
 add_adj(adj,1,3)
-add_adj(adj,3,5)
-add_adj(adj,4,5)
-add_adj(adj,2,4)
+add_adj(adj,3,2)
 
 print_list(adj)
 bfs(adj)
