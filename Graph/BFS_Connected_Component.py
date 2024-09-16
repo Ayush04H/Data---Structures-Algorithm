@@ -20,14 +20,22 @@ def bfs_dis(adj):
             res+=1
     print("The Connected Components are :",res)
 
-def printGraph(adj):
-    for u, l in enumerate(adj):
-        print(u, l)
 
 
-v = 10
+def add_adj(adj,u,v):
+    adj[u].append(v)
+    adj[v].append(u)
 
-adj = [[1, 2], [0, 3], [0, 3], [1, 2], [5, 6], [4, 6], [4, 5] , [8,9] , [7,9] ,[7,8]]
-printGraph(adj)
+def print_list(adj):
+    for u,v in enumerate(adj):
+        print(u,v)
+v=4
+adj=[[] for i in range(v)]
+add_adj(adj,0,1)
+add_adj(adj,0,3)
+add_adj(adj,1,2)
+add_adj(adj,1,3)
+add_adj(adj,3,2)
+print_list(adj)
 print('\nBFS path')
 bfs_dis(adj)
