@@ -13,7 +13,7 @@ from collections import deque
             current_max = max(current_max, arr[j])
         
         # Print the maximum of the current subarray
-        print(current_max)   Brute Force '''
+        print(current_max)  # Brute Force '''
 
 
 def max_of_subarray(arr,k):
