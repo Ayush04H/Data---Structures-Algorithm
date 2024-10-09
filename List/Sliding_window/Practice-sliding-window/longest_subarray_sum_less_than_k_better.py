@@ -5,12 +5,12 @@ def longest_subarray_sum_less_than_k(arr, k):
     max_size = 0
     res = []
 
-    while j < n:
+    for j in range(n):
         # Add the current element to the total sum
         sum_tot += arr[j]
         
         # Shrink the window if the sum exceeds or equals k
-        while sum_tot >= k and i <= j:   # For optimal Approach change the 
+        if sum_tot >= k:   # For optimal Approach change the 
             sum_tot -= arr[i]            # while to if only for neccesary conditions
             i += 1
 
@@ -19,7 +19,6 @@ def longest_subarray_sum_less_than_k(arr, k):
             max_size = j - i + 1
             res = arr[i:j+1]
 
-        j += 1
 
     return max_size, res
 
