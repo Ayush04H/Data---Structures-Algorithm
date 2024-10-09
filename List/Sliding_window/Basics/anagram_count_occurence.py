@@ -1,13 +1,15 @@
+from collections import Counter
 string = "aabaabaa"
 ptr = "aaba"
 n = len(string)
 k = len(ptr)
-d = {}
+'''d = {}
 for i in ptr:
     if i in d:
         d[i] += 1
     else:
-        d[i] = 1
+        d[i] = 1'''
+d = Counter(ptr)
 i = 0
 j = 0
 count = len(d)

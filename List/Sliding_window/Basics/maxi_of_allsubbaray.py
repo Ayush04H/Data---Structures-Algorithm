@@ -38,7 +38,7 @@ def max_of_subarray(arr,k):
             res.append(arr[dq[0]])
 
             if dq[0] == i:
-                dq.pop()
+                dq.popleft()
 
             i+=1
             j+=1
