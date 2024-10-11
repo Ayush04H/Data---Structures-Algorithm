@@ -15,9 +15,10 @@ def longest_subarray_sum_less_than_k(arr, k):
             i += 1
 
         # Update the result if the current window is the longest
-        if j - i + 1 > max_size:
-            max_size = j - i + 1
-            res = arr[i:j+1]
+        if sum_tot < k :
+            if j - i + 1 > max_size:
+                max_size = j - i + 1
+                res = arr[i:j+1]
 
 
     return max_size, res
