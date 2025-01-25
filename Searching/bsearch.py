@@ -27,5 +27,5 @@ if __name__=='__main__':
     l=[10,20,40,40,12,124,134,162]
     l.sort()
     print(l)
-    x=40
+    x=0
     print(bsearch2(l,x,0,len(l)))

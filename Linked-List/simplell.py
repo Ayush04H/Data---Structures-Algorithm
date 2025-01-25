@@ -57,7 +57,9 @@ def dellast(head):
 
 def delpos(head,pos):
     if pos==1:
-        delbeg(head)
+        new=head.next
+        head.next=None
+        return new
     temp=head
     for i in range(pos-2):
         temp=temp.next
@@ -88,10 +90,10 @@ head=insertbegin(head,15)
 head=insertend(head,100)
 head=insertpos(head,25,2)
 printhead(head)
-head=delbeg(head)
-printhead(head)
-head=dellast(head)
-printhead(head)
+#head=delbeg(head)
+#printhead(head)
+#head=dellast(head)
+#printhead(head)
 head=delpos(head,3)
 printhead(head)
 

@@ -1,7 +1,7 @@
 def longest(s,k):
     maxi = 0
     n = len(s)
-
+    res = []
     if n==0 or k ==0:
         return 0
     
@@ -22,14 +22,15 @@ def longest(s,k):
 
             i+=1
 
-        
-        maxi = max(maxi,j-i+1)
+        if len(counter) == k:
+            maxi = max(maxi,j-i+1)
+            res=s[i:j+1]
 
 
-    return maxi 
+    return maxi ,res
 
 
-s = "aabacbebebe"
+s = "aabacbebebebbee"
 k = 3
 result = longest(s, k)
 print(f"Length of the longest substring with {k} unique characters: {result}")

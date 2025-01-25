@@ -1,4 +1,4 @@
-"""
++"""
 # Python3 implementation to find the first negative 
 # integer in every window of size k
 

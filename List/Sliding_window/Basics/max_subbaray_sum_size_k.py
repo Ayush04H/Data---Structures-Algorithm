@@ -52,8 +52,8 @@ def max_subbaray_sum(arr,k):
         return maxi
 
 
-Arr = [100, 200, 300, 400]
-k=2
+Arr = [1,2,3,4,5,6,1]
+k=3
 
 print(max_subbaray_sum(Arr,k))
 
