@@ -135,6 +135,7 @@ int main() {
     head = insertEndM2(head, 99);
     head = insertPos(head, 3, 2);
     head = insertPos(head, 7, 5);
+    head = insertPos(head, 7, 5);
 
     printCC(head);
     cout << "\n";
