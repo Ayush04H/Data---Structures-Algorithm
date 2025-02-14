@@ -7,7 +7,7 @@
 '''
 
 def func(n):
-    # Upper triangle
+    # Lower triangle
     for i in range(n,0,-1):
         num = 1
         for j in range(1, 2 * n):
